@@ -1,4 +1,4 @@
-baseURL = "http://sarelblog.netlify.app"
+baseURL = "http://sarelsblog.netlify.app"
 languageCode = "en-us"
 title = "Sarel's Blog Site"
 theme = "hugo-theme-shell"
