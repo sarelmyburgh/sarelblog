@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>sarelsblog.netlify.app/blog/</loc>
+    <loc>https://sarelsblog.netlify.app/blog/</loc>
   </url><url>
-    <loc>sarelsblog.netlify.app/</loc>
+    <loc>https://sarelsblog.netlify.app/</loc>
   </url><url>
-    <loc>sarelsblog.netlify.app/series/</loc>
+    <loc>https://sarelsblog.netlify.app/series/</loc>
   </url><url>
-    <loc>sarelsblog.netlify.app/tags/</loc>
+    <loc>https://sarelsblog.netlify.app/tags/</loc>
   </url>
 </urlset>
