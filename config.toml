@@ -80,6 +80,11 @@ paginate     = 10
     name       = "Projects"
     url        = "projects/"
 
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+
   #Social Icons
 
   [[params.social]]
