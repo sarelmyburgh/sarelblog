@@ -1,0 +1,50 @@
+baseURL = "http://sarelblog.netlify.app"
+languageCode = "en-us"
+title = "Sarel's Blog Site"
+theme = "hugo-theme-shell"
+
+[Params]
+  [Params.Terminal]
+  # Note: color schema
+  # Note: You can choose between
+  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
+  schema = "monokai"
+
+  # Note: in terminal
+  # [userName]@[pcName]:~/$ cd [workDir]
+  # [userName]@[pcName]:~/[workDir]$ cat [profile]
+  #
+  # [description]
+  #
+  # Note: if you set Params.Tree > user = true
+  # [userName]@[pcName]:~/[workDir]$ tree ./[folderName]/
+  # ./[folderName]/
+  # ...
+  # Note: result of the tree command
+  userName = "sarel"
+  pcName = "blog"
+  workDir = "mydir"
+  profile = "profile.txt"
+
+  # Note: speed at which text is displayed on the terminal
+  terminalDelay = 20
+
+  # Note: speed at which text is displayed on the activity pages
+  activityDelay = 5
+
+  description = """
+  Hi I am Sarel Myburgh!
+  Nice to meet you!
+
+  """
+  [Params.Tree]
+  use = true
+  folderName = "my_activity"
+  # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
+  files = [ 
+    ["C/C++", "https://www.example.com/"],
+    ["Python", "https://www.example.com/"],
+    ["Go", "https://golang.org/"],
+    ["Hugo", "/post/some-activity.md"],
+    ["Docker", "/post/some-activity.md"],
+  ]
