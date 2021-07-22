@@ -1,50 +1,56 @@
-baseURL = "http://sarelsblog.netlify.app"
+baseurl      = "sarelsblog.netlify.app"
+title        = "Sarel's Blog"
 languageCode = "en-us"
-title = "Sarel's Blog Site"
-theme = "hugo-theme-shell"
+theme        = "hello-friend-ng"
+paginate     = 10
 
-[Params]
-  [Params.Terminal]
-  # Note: color schema
-  # Note: You can choose between
-  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
-  schema = "monokai"
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
 
-  # Note: in terminal
-  # [userName]@[pcName]:~/$ cd [workDir]
-  # [userName]@[pcName]:~/[workDir]$ cat [profile]
-  #
-  # [description]
-  #
-  # Note: if you set Params.Tree > user = true
-  # [userName]@[pcName]:~/[workDir]$ tree ./[folderName]/
-  # ./[folderName]/
-  # ...
-  # Note: result of the tree command
-  userName = "sarel"
-  pcName = "blog"
-  workDir = "mydir"
-  profile = "profile.txt"
+  # Subtitle for home
+  homeSubtitle = "I like cybersecurity, amateur web development and a coding. Have a look at my projects and writeups."
 
-  # Note: speed at which text is displayed on the terminal
-  terminalDelay = 20
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
 
-  # Note: speed at which text is displayed on the activity pages
-  activityDelay = 5
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
 
-  description = """
-  Hi I am Sarel Myburgh!
-  Nice to meet you!
+  # Metadata mostly used in document's head
+  description = "Sarel Myburgh's blog"
+  keywords = "homepage, blog"
+  images = [""]
 
-  """
-  [Params.Tree]
-  use = true
-  folderName = "my_activity"
-  # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
-  files = [ 
-    ["C/C++", "https://www.example.com/"],
-    ["Python", "https://www.example.com/"],
-    ["Go", "https://golang.org/"],
-    ["Hugo", "/post/some-activity.md"],
-    ["Docker", "/post/some-activity.md"],
-  ]
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "Hi, I'm Sarel"
+    subtitle = "I like tech stuff"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "sarel's blog"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+  [[menu.main]]
+    identifier = "writeups"
+    name       = "Writeups"
+    url        = "/posts/writeups"
