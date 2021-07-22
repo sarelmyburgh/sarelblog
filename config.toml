@@ -38,10 +38,10 @@ paginate     = 10
     msapplication = "#1b1c1d"
     theme = "#1b1c1d"
 
-[taxonomies]
-    category = "blog"
-    tag      = "tags"
-    series   = "series"
+#[taxonomies]
+#    category = "blog"
+#    tag      = "tags"
+#    series   = "series"
 
 [languages]
   [languages.en]
