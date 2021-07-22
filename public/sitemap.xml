@@ -2,12 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sarelsblog.netlify.app/blog/</loc>
+    <loc>https://sarel.tech/tags/blog/</loc>
+    <lastmod>2021-07-22T10:56:48+07:00</lastmod>
   </url><url>
-    <loc>https://sarelsblog.netlify.app/</loc>
+    <loc>https://sarel.tech/blog/</loc>
+    <lastmod>2021-07-22T10:56:48+07:00</lastmod>
   </url><url>
-    <loc>https://sarelsblog.netlify.app/series/</loc>
+    <loc>https://sarel.tech/blog/hello-world/</loc>
+    <lastmod>2021-07-22T10:56:48+07:00</lastmod>
   </url><url>
-    <loc>https://sarelsblog.netlify.app/tags/</loc>
+    <loc>https://sarel.tech/</loc>
+    <lastmod>2021-07-22T10:56:48+07:00</lastmod>
+  </url><url>
+    <loc>https://sarel.tech/tags/</loc>
+    <lastmod>2021-07-22T10:56:48+07:00</lastmod>
+  </url><url>
+    <loc>https://sarel.tech/blog/</loc>
+  </url><url>
+    <loc>https://sarel.tech/series/</loc>
   </url>
 </urlset>

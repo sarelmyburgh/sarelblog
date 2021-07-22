@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Hi, I&#39;m Sarel</title>
-    <link>https://sarelsblog.netlify.app/blog/</link>
-    <description>Recent content in Blog on Hi, I&#39;m Sarel</description>
+    <title>Blogs on Hi, I&#39;m Sarel</title>
+    <link>https://sarel.tech/blog/</link>
+    <description>Recent content in Blogs on Hi, I&#39;m Sarel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><atom:link href="https://sarelsblog.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 22 Jul 2021 10:56:48 +0700</lastBuildDate><atom:link href="https://sarel.tech/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://sarel.tech/blog/hello-world/</link>
+      <pubDate>Thu, 22 Jul 2021 10:56:48 +0700</pubDate>
+      
+      <guid>https://sarel.tech/blog/hello-world/</guid>
+      <description>For a long time I&amp;rsquo;ve used Wordpress with the Divi theme to make websites. It worked well, but to be honest, I never actually used the websites that much. This meant that I usually end up paying for hosting for a website that I don&amp;rsquo;t really use.
+In order to combat that (and learn some new skills) I figured I would try out this whole &amp;ldquo;Jamstack&amp;rdquo; thing I keep hearing about.</description>
+    </item>
+    
   </channel>
 </rss>

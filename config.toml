@@ -4,6 +4,9 @@ languageCode = "en-us"
 theme        = "hello-friend-ng"
 paginate     = 10
 
+[author]
+  name = "Sarel Myburgh"
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -27,6 +30,11 @@ paginate     = 10
   description = "Sarel Myburgh's blog"
   keywords = "homepage, blog"
   images = [""]
+
+[params.favicon.color]
+    mask = "#1b1c1d"
+    msapplication = "#1b1c1d"
+    theme = "#1b1c1d"
 
 [taxonomies]
     category = "blog"
@@ -61,6 +69,16 @@ paginate     = 10
     identifier = "writeups"
     name       = "Writeups"
     url        = "writeups/"
+
+  [[menu.main]]
+    identifier = "tutorials"
+    name       = "Tutorials"
+    url        = "tutorials/"
+
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
 
   #Social Icons
 
