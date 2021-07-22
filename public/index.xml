@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sarel&#39;s Blog Site</title>
-    <link>http://sarelblog.netlify.app/</link>
+    <link>http://sarelsblog.netlify.app/</link>
     <description>Recent content on Sarel&#39;s Blog Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://sarelblog.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://sarelsblog.netlify.app/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
