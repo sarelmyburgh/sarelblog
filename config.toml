@@ -4,6 +4,8 @@ languageCode = "en-us"
 theme        = "hello-friend-ng"
 paginate     = 10
 
+googleAnalytics = "G-PMLHPQKZQP"
+
 [author]
   name = "Sarel Myburgh"
 
@@ -30,7 +32,7 @@ paginate     = 10
 
   # Metadata mostly used in document's head
   description = "Sarel Myburgh's blog"
-  keywords = "homepage, blog"
+  keywords = "blog, hacking, technology, writeups"
   images = [""]
 
 [params.favicon.color]
