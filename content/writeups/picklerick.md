@@ -112,7 +112,7 @@ Root does indeed contain the final ingredient, which can be viewed with `sudo le
 
 ## Final Notes
 
-This writeup only explored the simplest, newbie friendly path of exploitation. The only knowledge needed was [nmap](https://tryhackme.com/room/furthernmap), [gobuster](https://github.com/OJ/gobuster/blob/master/README.md), and some [basic linux commands](https://tryhackme.com/room/linuxfundamentalspart1). 
+This writeup only explored the simplest, newbie friendly path of exploitation. The only knowledge needed was [nmap](https://tryhackme.com/room/furthernmap), [gobuster](https://tryhackme.com/room/webenumerationv2), and some [basic linux commands](https://tryhackme.com/room/linuxfundamentalspart1). 
 
 There are many ways to gain the flags, including using the unrestricted sudo access to create a reverse shell.
 
