@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeups on Hi, I&#39;m Sarel</title>
+    <link>https://sarel.tech/writeups/</link>
+    <description>Recent content in Writeups on Hi, I&#39;m Sarel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 29 Jul 2021 14:02:39 +0700</lastBuildDate><atom:link href="https://sarel.tech/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>THM Pickle Rick</title>
+      <link>https://sarel.tech/writeups/picklerick/</link>
+      <pubDate>Thu, 29 Jul 2021 14:02:39 +0700</pubDate>
+      
+      <guid>https://sarel.tech/writeups/picklerick/</guid>
+      <description>This writeup goes over finding all three ingredients in the TryHackMe Pickle Rick room, without obtaining a shell
+Background There are three flags that we need to get. For this writeup, the IP of the victim is 10.10.79.234
+Enumeration An nmap scan is run to determine the ports and services available on the machine
+nmap -sV 10.10.79.234The results show that SSH is open, and that there is a webserver.</description>
+    </item>
+    
+  </channel>
+</rss>

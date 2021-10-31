@@ -7,13 +7,68 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 22 Jul 2021 10:56:48 +0700</lastBuildDate><atom:link href="https://sarel.tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jul 2021 14:02:39 +0700</lastBuildDate><atom:link href="https://sarel.tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>THM Pickle Rick</title>
+      <link>https://sarel.tech/writeups/picklerick/</link>
+      <pubDate>Thu, 29 Jul 2021 14:02:39 +0700</pubDate>
+      
+      <guid>https://sarel.tech/writeups/picklerick/</guid>
+      <description>This writeup goes over finding all three ingredients in the TryHackMe Pickle Rick room, without obtaining a shell
+Background There are three flags that we need to get. For this writeup, the IP of the victim is 10.10.79.234
+Enumeration An nmap scan is run to determine the ports and services available on the machine
+nmap -sV 10.10.79.234The results show that SSH is open, and that there is a webserver.</description>
+    </item>
+    
+    <item>
+      <title>Sucking at Something</title>
+      <link>https://sarel.tech/blog/sucking/</link>
+      <pubDate>Wed, 28 Jul 2021 07:35:09 +0700</pubDate>
+      
+      <guid>https://sarel.tech/blog/sucking/</guid>
+      <description>As of today, 28 July, 2021, I suck at hacking.
+Why do I say this? Because for the past few days I attempted the final three black box labs in the INE Penetration Testing Student path. And I failed specatacularly. Apart from some basic enumeration, I was barely able to scratch the surface of the boxes. These are entry level things.
+I thought that finishing 41 rooms on TryHackMe and cruising through the INE course meant I would be ready.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://sarel.tech/about/</link>
+      <pubDate>Thu, 22 Jul 2021 15:00:59 +0700</pubDate>
+      
+      <guid>https://sarel.tech/about/</guid>
+      <description>I&amp;rsquo;m Sarel Myburgh I&amp;rsquo;m a South African IT guy traveling whenever I can.
+I&amp;rsquo;m a bit of a Jack of all Trades, Master of None, which is pretty good for teaching middleschool ICT (but not much else).
+I am steadily trying to specialize in cybersecurity.
+You can contact me on LinkedIn
+My goals  Create a blog to document my progress Complete the eJPT exam Complete all learning paths in TryHackMe Complete the CompTIA Security+ exam Complete 5 CTFs with writeups Complete 10 CTFs with writeups Complete the OSCP exam Find a job in the cybersecurity field  </description>
+    </item>
+    
+    <item>
+      <title>Tech Blog</title>
+      <link>https://sarel.tech/projects/techblog/</link>
+      <pubDate>Thu, 22 Jul 2021 14:24:14 +0700</pubDate>
+      
+      <guid>https://sarel.tech/projects/techblog/</guid>
+      <description>Why? A career in IT is become more and more like one in the arts. Steadily, more emphasis is being placed on your portfolop and past experience, rather than on your qualifications. This blog serves to be my public portfolio. The thing potential employers can look at when they decide whether or not they want to hire me.
+After several attempts at maintaining a Wordpress website, I decided that it&amp;rsquo;s just not worth the hassle for something that won&amp;rsquo;t get much traffic anyway.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://sarel.tech/tutorials/tutorial/</link>
+      <pubDate>Thu, 22 Jul 2021 14:23:41 +0700</pubDate>
+      
+      <guid>https://sarel.tech/tutorials/tutorial/</guid>
+      <description>This is where I would put my tutorials&amp;hellip; Seriously though, I might write something soon.</description>
+    </item>
+    
     <item>
       <title>Hello World</title>
-      <link>https://sarel.tech/blog/hello-world/</link>
+      <link>https://sarel.tech/blog/firstpost/</link>
       <pubDate>Thu, 22 Jul 2021 10:56:48 +0700</pubDate>
       
-      <guid>https://sarel.tech/blog/hello-world/</guid>
+      <guid>https://sarel.tech/blog/firstpost/</guid>
       <description>For a long time I&amp;rsquo;ve used Wordpress with the Divi theme to make websites. It worked well, but to be honest, I never actually used the websites that much. This meant that I usually end up paying for hosting for a website that I don&amp;rsquo;t really use.
 In order to combat that (and learn some new skills) I figured I would try out this whole &amp;ldquo;Jamstack&amp;rdquo; thing I keep hearing about.</description>
     </item>

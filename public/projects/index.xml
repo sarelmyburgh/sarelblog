@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Hi, I&#39;m Sarel</title>
+    <link>https://sarel.tech/projects/</link>
+    <description>Recent content in Projects on Hi, I&#39;m Sarel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 22 Jul 2021 14:24:14 +0700</lastBuildDate><atom:link href="https://sarel.tech/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tech Blog</title>
+      <link>https://sarel.tech/projects/techblog/</link>
+      <pubDate>Thu, 22 Jul 2021 14:24:14 +0700</pubDate>
+      
+      <guid>https://sarel.tech/projects/techblog/</guid>
+      <description>Why? A career in IT is become more and more like one in the arts. Steadily, more emphasis is being placed on your portfolop and past experience, rather than on your qualifications. This blog serves to be my public portfolio. The thing potential employers can look at when they decide whether or not they want to hire me.
+After several attempts at maintaining a Wordpress website, I decided that it&amp;rsquo;s just not worth the hassle for something that won&amp;rsquo;t get much traffic anyway.</description>
+    </item>
+    
+  </channel>
+</rss>
