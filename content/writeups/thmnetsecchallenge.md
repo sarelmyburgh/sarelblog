@@ -60,7 +60,7 @@ The next question we can attempt is the ftp passwords for "eddie" and "quinn". T
 
 This gives us the passwords of both users.
 
-![hydra](https://imgur.com/pAZMrLX.png)
+![hydra](https://imgur.com/I2T0gtN.png)
 
 Once you have the passwords, there are multiple ways to access the files. In this example, I simply pointed my browser to ftp://10.10.102.108:10021 and was promted for a username and password. testing both, you will see that Quinn has the flag. Download and view the file to answer question 7.
 
