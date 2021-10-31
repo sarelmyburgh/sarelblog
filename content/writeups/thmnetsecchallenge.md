@@ -11,7 +11,7 @@ author: "Sarel"
 
 ## Background
 
-This room tests your nmap, hydra and telnet abilities and although it is classified as "Medium", the room is pretty easy if you paid attention to the rest of the rooms in the [Network Security](https://tryhackme.com/module/network-security) module.
+This room tests your Nmap, Hydra and Telnet abilities and although it is classified as "Medium", the room is pretty easy if you paid attention to the rest of the rooms in the [Network Security](https://tryhackme.com/module/network-security) module.
 
 ## Enumeration
 
