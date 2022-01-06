@@ -77,7 +77,7 @@ googleAnalytics = "G-PMLHPQKZQP"
   [[menu.main]]
     identifier = "tutorials"
     name       = "Tutorials"
-    url        = "tutorials/"
+    url        = "https://tutorials.sarel.tech/"
 
   [[menu.main]]
     identifier = "projects"
