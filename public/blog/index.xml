@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Hi, I&#39;m Sarel</title>
+    <link>https://sarel.tech/blog/</link>
+    <description>Recent content in Blogs on Hi, I&#39;m Sarel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 28 Jul 2021 07:35:09 +0700</lastBuildDate><atom:link href="https://sarel.tech/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sucking at Something</title>
+      <link>https://sarel.tech/blog/sucking/</link>
+      <pubDate>Wed, 28 Jul 2021 07:35:09 +0700</pubDate>
+      
+      <guid>https://sarel.tech/blog/sucking/</guid>
+      <description>As of today, 28 July, 2021, I suck at hacking.
+Why do I say this? Because for the past few days I attempted the final three black box labs in the INE Penetration Testing Student path. And I failed specatacularly. Apart from some basic enumeration, I was barely able to scratch the surface of the boxes. These are entry level things.
+I thought that finishing 41 rooms on TryHackMe and cruising through the INE course meant I would be ready.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://sarel.tech/blog/firstpost/</link>
+      <pubDate>Thu, 22 Jul 2021 10:56:48 +0700</pubDate>
+      
+      <guid>https://sarel.tech/blog/firstpost/</guid>
+      <description>For a long time I&amp;rsquo;ve used Wordpress with the Divi theme to make websites. It worked well, but to be honest, I never actually used the websites that much. This meant that I usually end up paying for hosting for a website that I don&amp;rsquo;t really use.
+In order to combat that (and learn some new skills) I figured I would try out this whole &amp;ldquo;Jamstack&amp;rdquo; thing I keep hearing about.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Sarel">
+<meta name="description" content="This writeup goes over finding all three ingredients in the TryHackMe Pickle Rick room, without obtaining a shell
+Background There are three flags that we need to get. For this writeup, the IP of the victim is 10.10.79.234
+Enumeration An nmap scan is run to determine the ports and services available on the machine
+nmap -sV 10.10.79.234The results show that SSH is open, and that there is a webserver." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://sarel.tech/writeups/picklerick/" />
+
+
+    <title>
+        
+            THM Pickle Rick :: Hi, I&#39;m Sarel  — I like tech stuff
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.031a8efc33f94f55a4071bf4e91596478a5809fc8c148fab113801189cfd2152.css">
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/image.css">
+    
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1c1d">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#1b1c1d">
+    <meta name="theme-color" content="#1b1c1d">
+
+
+
+<meta itemprop="name" content="THM Pickle Rick">
+<meta itemprop="description" content="This writeup goes over finding all three ingredients in the TryHackMe Pickle Rick room, without obtaining a shell
+Background There are three flags that we need to get. For this writeup, the IP of the victim is 10.10.79.234
+Enumeration An nmap scan is run to determine the ports and services available on the machine
+nmap -sV 10.10.79.234The results show that SSH is open, and that there is a webserver."><meta itemprop="datePublished" content="2021-07-29T14:02:39+07:00" />
+<meta itemprop="dateModified" content="2021-07-29T14:02:39+07:00" />
+<meta itemprop="wordCount" content="493"><meta itemprop="image" content="https://sarel.tech/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sarel.tech/"/>
+
+<meta name="twitter:title" content="THM Pickle Rick"/>
+<meta name="twitter:description" content="This writeup goes over finding all three ingredients in the TryHackMe Pickle Rick room, without obtaining a shell
+Background There are three flags that we need to get. For this writeup, the IP of the victim is 10.10.79.234
+Enumeration An nmap scan is run to determine the ports and services available on the machine
+nmap -sV 10.10.79.234The results show that SSH is open, and that there is a webserver."/>
+
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-07-29 14:02:39 &#43;0700 &#43;07" />
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PMLHPQKZQP"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PMLHPQKZQP', { 'anonymize_ip': false });
+}
+</script>
+
+
+<script async src="//static.getclicky.com/101327449.js"></script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101327449ns.gif" /></p></noscript>
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">[sarel@blog:~$]</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#117325;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/projects/">Projects</a></li><li><a href="/tutorials/">Tutorials</a></li><li><a href="/writeups/">Writeups</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://sarel.tech/writeups/picklerick/">THM Pickle Rick</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><em><strong>This writeup goes over finding all three ingredients in the <a href="https://tryhackme.com/room/picklerick">TryHackMe Pickle Rick</a> room, without obtaining a shell</strong></em></p>
+<h2 id="background">Background</h2>
+<p>There are three flags that we need to get.
+For this writeup, the IP of the victim is 10.10.79.234</p>
+<h2 id="enumeration">Enumeration</h2>
+<p>An nmap scan is run to determine the ports and services available on the machine</p>
+<pre><code>nmap -sV 10.10.79.234
+</code></pre><p>The results show that SSH is open, and that there is a webserver.</p>
+<p><img src="https://i.imgur.com/reM5uXS.png" alt="nmap results"></p>
+<p>The website is live, but has little information on the front end</p>
+<p><img src="https://i.imgur.com/C4sSJjt.png" alt="website"></p>
+<p>Checking the page source of the website, reveals a comment containing a username.</p>
+<p><img src="https://i.imgur.com/iG6xiZu.png" alt="username"></p>
+<p>If we have a username, it means there should be a login page. This can be enumerated with gobuster. The command used is<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
+<pre><code>gobuster -m dir -u http://10.10.79.234 -w /usr/share/wordlists/dirb/common.txt -x php,txt,html
+</code></pre><p><img src="https://i.imgur.com/S02uxQf.png" alt="gobuster"></p>
+<p>Two results that stand out are login.php and robots.txt</p>
+<p>Looking at <code>http://10.10.79.234/robots.txt</code> simply shows the line <em>&ldquo;Wubbalubbadubdub&rdquo;</em></p>
+<p>Heading to <code>http://10.10.79.234/login.php</code> presents us with a login page.</p>
+<p><img src="https://i.imgur.com/ySm9EPl.png" alt="login"></p>
+<h2 id="exploitation">Exploitation</h2>
+<p>As a wild guess, we enter the username we found earlier and the phrase we found in the robots.txt file. We are able to successfully log in and are shown a command panel.</p>
+<p><img src="https://i.imgur.com/GC3F6Fl.png" alt="command"></p>
+<p>We can try to enter <code>ls</code> as a command, and receive an output.</p>
+<p><img src="https://i.imgur.com/r4arqkY.png" alt="ls"></p>
+<p>It works, so we can assume that other linux commands will also work.</p>
+<hr>
+<h3 id="the-first-ingredient">The First Ingredient</h3>
+<p>The ingredient is right there, and we can try to open it with the command <code>cat Sup3rS3cretPickl3Ingred.txt</code>, however, it fails. Certain commands are disabled.</p>
+<p><img src="https://i.imgur.com/KYAGeL4.png" alt="disabled command"></p>
+<p>However, if we try to use <code>less</code> instead of <code>cat</code>, we get an output containing the first ingredient.
+<code>less Sup3rS3cretPickl3Ingred.txt</code></p>
+<p><img src="https://i.imgur.com/RgO7EuR.png" alt="less"></p>
+<hr>
+<h3 id="the-second-ingredient">The Second Ingredient</h3>
+<p>Using <code>less clue.txt</code> reveals that the other ingredients are on the file system.</p>
+<p><img src="https://i.imgur.com/H33PVo3.png" alt="clue"></p>
+<p>We can try navigating the rest of the system. <code>ls /home</code> shows two user directories.</p>
+<p><img src="https://i.imgur.com/ujBD4De.png" alt="home"></p>
+<p>We can see what is inside Rick&rsquo;s directory with <code>ls /home/rick</code>.</p>
+<p><img src="https://i.imgur.com/jTPaST1.png" alt="rick"></p>
+<p>This reveals the second ingredient, which we can see with <code>less /home/rick/&quot;second ingredients&quot;</code>.</p>
+<p><img src="https://i.imgur.com/srkWCF5.png" alt="second"></p>
+<hr>
+<h3 id="the-third-ingredient">The Third Ingredient</h3>
+<p>We may assume that the final ingredient may be in the root folder, however we are not able to access it as is. We run the <code>sudo -l</code> command to see if we can run any commands as sudo that can be used to our advantage.</p>
+<p><img src="https://i.imgur.com/o8wQjcg.png" alt="sudo"></p>
+<p>It seems like our user has unrestricted access to the <code>sudo</code> command. Thus, in order to view the content of the root folder, we can use <code>sudo ls /root</code>.</p>
+<p><img src="https://i.imgur.com/tB8Ttw6.png" alt="root folder"></p>
+<p>Root does indeed contain the final ingredient, which can be viewed with <code>sudo less /root/3rd.txt</code></p>
+<p><img src="https://i.imgur.com/67eM0rs.png" alt="third"></p>
+<h2 id="final-notes">Final Notes</h2>
+<p>This writeup only explored the simplest, newbie friendly path of exploitation. The only knowledge needed was <a href="https://tryhackme.com/room/furthernmap">nmap</a>, <a href="https://tryhackme.com/room/webenumerationv2">gobuster</a>, and some <a href="https://tryhackme.com/room/linuxfundamentalspart1">basic linux commands</a>.</p>
+<p>There are many ways to gain the flags, including using the unrestricted sudo access to create a reverse shell.</p>
+<hr>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This command lets gobuster scan in &ldquo;directory&rdquo; mode. We use a wordlist from dirb (an application similar to gobuster), because gobuster on Kali does not have its own wordlist. The <code>-x</code> option allows us to only search for certain file extensions.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.599099f1f14b78b657d524b28e10e0c5098e7cd46e9c7aed73d577068a276c3ff1bb234cbf29cb313333e83cf411727b43157c91ce5b809e2ffc81664614608e.js" integrity="sha512-WZCZ8fFLeLZX1SSyjhDgxQmOfNRunHrtc9V3BoonbD/xuyNMvynLMTMz6Dz0EXJ7QxV8kc5bgJ4v/IFmRhRgjg=="></script>
+
+
+
+    </body>
+</html>
